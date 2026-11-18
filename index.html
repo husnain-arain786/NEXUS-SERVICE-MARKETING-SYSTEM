@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Nexus Service Marketing System">
+  <title>NEXUS | Service Marketing System</title>
+  <style>
+    :root { color-scheme: light; --navy: #14213d; --blue: #2563eb; --muted: #64748b; }
+    * { box-sizing: border-box; }
+    body { margin: 0; font-family: Arial, Helvetica, sans-serif; color: var(--navy); background: #f8fafc; }
+    header { display: flex; justify-content: space-between; align-items: center; padding: 22px max(6%, calc((100% - 1120px)/2)); background: white; border-bottom: 1px solid #e2e8f0; }
+    .brand { font-size: 1.15rem; font-weight: 800; letter-spacing: .08em; }
+    .brand span { color: var(--blue); }
+    nav a { margin-left: 22px; color: #475569; text-decoration: none; font-size: .95rem; }
+    nav a:hover { color: var(--blue); }
+    main { max-width: 1120px; margin: auto; padding: 90px 24px; }
+    .hero { max-width: 760px; }
+    .eyebrow { color: var(--blue); font-weight: 700; text-transform: uppercase; letter-spacing: .14em; font-size: .8rem; }
+    h1 { font-size: clamp(2.5rem, 6vw, 4.6rem); line-height: 1.06; margin: 18px 0; }
+    h1 span { color: var(--blue); }
+    .intro { max-width: 650px; color: var(--muted); font-size: 1.15rem; line-height: 1.8; }
+    .actions { display: flex; gap: 14px; flex-wrap: wrap; margin-top: 30px; }
+    .button { display: inline-block; padding: 13px 21px; border-radius: 8px; text-decoration: none; font-weight: 700; }
+    .primary { background: var(--blue); color: white; }
+    .secondary { color: var(--navy); border: 1px solid #cbd5e1; background: white; }
+    .features { display: grid; grid-template-columns: repeat(3, 1fr); gap: 18px; margin-top: 78px; }
+    .feature { background: white; border: 1px solid #e2e8f0; border-radius: 12px; padding: 24px; }
+    .feature h2 { font-size: 1.1rem; margin: 0 0 10px; }
+    .feature p { color: var(--muted); line-height: 1.65; margin: 0; }
+    footer { text-align: center; color: var(--muted); padding: 25px; border-top: 1px solid #e2e8f0; font-size: .9rem; }
+    @media (max-width: 700px) { header { align-items: flex-start; gap: 16px; flex-direction: column; } nav a { margin: 0 16px 0 0; } main { padding-top: 60px; } .features { grid-template-columns: 1fr; margin-top: 55px; } }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="brand">NEXUS<span>.</span></div>
+    <nav aria-label="Main navigation">
+      <a href="#home">Home</a>
+      <a href="#features">Features</a>
+      <a href="#about">About</a>
+    </nav>
+  </header>
+
+  <main id="home">
+    <section class="hero" id="about">
+      <p class="eyebrow">Service Marketing Management</p>
+      <h1>Welcome to <span>NEXUS</span></h1>
+      <p class="intro">A central platform concept for managing service marketing activities, customer relationships, and business growth. This homepage is the starting point for the NEXUS Service Marketing System.</p>
+      <div class="actions">
+        <a class="button primary" href="#features">Explore Features</a>
+        <a class="button secondary" href="#about">Learn More</a>
+      </div>
+    </section>
+
+    <section class="features" id="features" aria-label="System features">
+      <article class="feature">
+        <h2>Customer Management</h2>
+        <p>Keep customer information and interactions organized in one place.</p>
+      </article>
+      <article class="feature">
+        <h2>Service Management</h2>
+        <p>Present and manage the services offered by your business.</p>
+      </article>
+      <article class="feature">
+        <h2>Marketing Overview</h2>
+        <p>Build a foundation for tracking campaigns, leads, and marketing activity.</p>
+      </article>
+    </section>
+  </main>
+
+  <footer>
+    &copy; <span id="year"></span> NEXUS Service Marketing System. All rights reserved.
+  </footer>
+  <script>
+    document.getElementById('year').textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>
